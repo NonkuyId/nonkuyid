@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NONKUY GAMES</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">NONKUY</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">HOME</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#game" class="navbar__links" id="#game">GAME</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="services-page"
+              >ABOUT</a>
+              
+          </li>
+          <li class="navbar__btn">
+            <a href="#sign-up" class="button" id="signup">NONKUY</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading">Game By : <span>NONKUY</span></h1>
+        <p class="hero__description">Play Game</p>
+        <button class="main__btn"><a href="#game">Start</a></button>
+      </div>
+    </div>
+
+    <style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+
+
+#slider{
+  margin:0 auto;
+  width:80%;
+  overflow:hidden;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+img{
+  width:80%;
+  margin: 0 10%;
+}
+
+#dot{
+  margin:0 auto;
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  border-radius:50%;
+  background:#d3d3d3;
+  padding:8px;
+  margin:10px 5px;
+}
+
+.active{
+  background:black;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+}
+
+#heading{
+  display:block;
+  text-align:center;
+  font-size:2em;
+  margin:10px 0px;
+font-size: 2rem;
+  background-color: #fe3b6f;
+  background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+</style>
+
+
+  <span id="heading">SEGERA HADIR</span>
+<div id="slider">  
+<div class="slides">  
+  <img src="#" width="100%" alt="BELUM ADA INFO" />
+ </div>
+  
+  <div class="slides">  
+  <img src="#" width="100%" alt="BELUM ADA INFO" />
+</div>
+  
+  <div class="slides">  
+  <img src="#" width="100%" alt="BELUM ADA INFO" />
+</div> 
+  
+
+  
+  <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></div>
+ </div>
+
+ <script>
+  var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  if(index<0){
+    index = slides.length-1;
+  }
+  
+  if(index>slides.length-1){
+    index = 0;
+  }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,5000);
+  
+}
+
+changeSlide();
+ </script>
+
+
+
+    <!-- Services Section -->
+          <section id="game">
+    <div class="services" id="services">
+      <h1>GAME</h1>
+      <div class="services__wrapper">
+        <div class="services__card">
+          <img class="img_" src="https://i.ibb.co/gWHwTwK/stick-hero.png" alt="">
+          <h2>Stick Hero</h2>
+          <p>By : Nonkuy</p>
+          <a href="game tic tac toe.html" style="text-decoration: none;"><div class="services__btn"><button>PLAY NOW</button></div></a>
+        </div>
+        <div class="services__card">
+          <img class="img_" src="https://i.ibb.co/RNsB7jV/coming-soon.jpg" alt="">
+          <h2>Are you Ready?</h2>
+          <p>By : Nonkuy</p>
+          <a href="#.html" style="text-decoration: none;"><div class="services__btn"><button>PLAY NOW</button></div></a>
+        </div>
+        <div class="services__card">
+          <img class="img_" src="https://i.ibb.co/RNsB7jV/coming-soon.jpg" alt="">
+          <h2>Are you Ready?</h2>
+          <p>By : Nonkuy</p>
+          <a href="#.html" style="text-decoration: none;"><div class="services__btn"><button>PLAY NOW</button></div></a>
+        </div>
+        <div class="services__card">
+          <img class="img_" src="https://i.ibb.co/RNsB7jV/coming-soon.jpg" alt="">
+          <h2>Are you Ready?</h2>
+          <p>By : Nonkuy</p>
+          <a href="#.html" style="text-decoration: none;"><div class="services__btn"><button>PLAY NOW</button></div></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <section id="about">
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">Play Game</a>
+            <a href="/">Games</a> <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Games</h2>
+            <a href="/">Play Game</a> <a href="/">Hiburan</a>
+            <a href="/">Bersenang Senang</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a> <a href="/">Tiktok</a>
+            <a href="/">Youtube</a>
+          </div>
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo">NONKUY</a>
+          </div>
+          <p class="website__rights">© COLOR 2021. All rights reserved</p>
+          <div class="social__icons">
+            <a href="https://tiktok.com/@nonkuy_id" class="social__icon--link" target="_blank"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="https://instagram.com/nonkuy_id?igshid=haipckxtw63n" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://youtube.com/channel/UCXmuYAsjC4vIqbdUf171mSg" class="social__icon--link"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

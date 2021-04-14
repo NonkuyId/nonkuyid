@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Aladdin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORUTO</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+    <div class="toggle"><a href="../../user.html"><img src=".png" alt=""></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>BORUTO</span></h2>
+            <p>
+                Boruto Uzumaki (bahasa Jepang: うずまき ボルト Hepburn: Uzumaki Boruto), awalnya dieja oleh Viz Media sebagai "Bolt",[1] adalah seorang karakter fiksi yang diciptakan oleh mangaka Masashi Kishimoto, yang pertama kali muncul pada akhir cerita dari seri manga Naruto sebagai putra dari tokoh utama dan protagonis Naruto Uzumaki dan Hinata Hyuga. Ia kemudian muncul sebagai tokoh utama dalam film anime tahun 2015 bertajuk Boruto: Naruto the Movie, di mana ia berlatih sebagai seorang ninja untuk melampaui ayahnya, pemimpin desa ninja Konohagakure.
+            </p>
+            <a href="#" class="play" onclick="toggle();"><img src="play.png" alt="">watch now</a>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="boruto trailer.mp4" controls="true"></video>
+        <img src="close.png" alt="" class="close" onclick="toggle();">
+    </div>
+    <script>
+        function toggle(){
+        var trailer=document.querySelector('.trailer');
+        let video=document.querySelector('.video');
+        trailer.classList.toggle('active');
+        video.currentTime = 0;
+        video.pause();
+    }
+    
+    </script>
+</body>
+</html>

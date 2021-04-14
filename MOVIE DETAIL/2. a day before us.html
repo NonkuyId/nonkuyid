@@ -1,0 +1,430 @@
+<style>
+	body {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #333;
+  background-color: #ddd;
+}
+
+label {
+  clear: both;
+  display: block;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 0.8em 0 0.2em 0;
+  user-select: none;
+}
+
+input, button {
+  float: left;
+  font-size: 1em;
+  padding: 3px 6px;
+  margin: 0;
+  border: 1px solid #333;
+  outline: 0;
+  box-shadow: none;
+}
+
+::-moz-focus-inner { 
+  padding: 0;
+  border: 0;
+}
+
+input {
+  width: 15em;
+  background-color: #fff;
+  border-right: 0 none;
+  border-radius: 3px 0 0 3px;
+}
+
+button {
+  position: relative;
+  background-color: #aaa;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.copied::after {
+  position: absolute;
+  top: 12%;
+  right: -110%;
+  display: block;
+  content: "copied";
+  font-size: 0.75em;
+  padding: 2px 3px;
+  color: #fff;
+  background-color: #22a;
+  border-radius: 3px;
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: showcopied 1.5s ease;
+}
+
+@keyframes showcopied {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style>
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+	
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Movie Detail</title>
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="../index.png" />
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+		<!-- Slick nav CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+		<!-- Iconfont CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+		<!-- Owl carousel CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+		<!-- Popup CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+		<!-- Main style CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- Page loader -->
+	    <div id="preloader"></div>
+		<!-- header section start -->
+		<header class="header">
+			<div class="container">
+				<div class="header-area">
+					<div class="logo">
+						<a href="index-2.html"><img src="#" alt="Nonkuy Official" /></a>
+					</div>
+					<div class="header-right">
+						<ul>
+							<li><a href="#">Welcome Guest!</a></li>
+						</ul>
+					</div>
+					<div class="menu-area">
+						<div class="responsive-menu"></div>
+					    <div class="mainmenu">
+                            <ul id="primary-menu">
+                                <li><a class="active" href="index-2.html">Home</a></li>
+                                <li><a href="movies.html">Movies</a></li>
+                                <li><a href="../BERITA.html">News</a></li>
+								<li><a href="#">Pages <i class="icofont icofont-simple-down"></i></a>
+									<ul>
+										<li><a class="active" href="movie-details.html">Movie Details</a></li>
+									</ul>
+								</li>
+								<li><a class="login-popup" href="#">Login</a></li>
+                            </ul>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="login-area">
+			<div class="login-box">
+				<a href="#"><i class="icofont icofont-close"></i></a>
+				<h2>LOGIN</h2>
+				<form action="#">
+					<h6>USERNAME OR EMAIL ADDRESS</h6>
+					<input type="text" />
+					<h6>PASSWORD</h6>
+					<input type="text" />
+					<div class="login-remember">
+						<input type="checkbox" />
+						<span>Remember Me</span>
+					</div>
+					<div class="login-signup">
+						<span>SIGNUP</span>
+					</div>
+					<a href="#" class="theme-btn">LOG IN</a>
+					<span>Or Via Social</span>
+					<div class="login-social">
+						<a href="#"><i class="icofont icofont-social-facebook"></i></a>
+						<a href="#"><i class="icofont icofont-social-twitter"></i></a>
+						<a href="#"><i class="icofont icofont-social-linkedin"></i></a>
+						<a href="#"><i class="icofont icofont-social-google-plus"></i></a>
+						<a href="#"><i class="icofont icofont-camera"></i></a>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+		<!-- breadcrumb area start -->
+		<section class="breadcrumb-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="breadcrumb-area-content">
+							<h1>A Day Before Us</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- breadcrumb area end -->
+		<!-- transformers area start -->
+		<section class="transformers-area">
+			<div class="container">
+				<div class="transformers-box">
+					<div class="row flexbox-center">
+						<div class="col-lg-5 text-lg-left text-center">
+							<div class="transformers-content">
+								<img src="https://i.ibb.co/chhv8QF/1.jpg" alt="about" />
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="transformers-content">
+								<h2>A Day Before Us</h2>
+								<p>Fiksi petualangan | Fantasi gelap | Seni bela diri</p>
+								<ul>
+									<li>
+										<div class="transformers-left">
+											Movie 
+										</div>
+										<div class="transformers-right">
+											<a href="#">Anime</a>
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Penerbit :
+										</div>
+										<div class="transformers-right">
+											Shueisha
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Pengarang :
+										</div>
+										<div class="transformers-right">
+											Koyoharu Gotōge
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Time: 
+										</div>
+										<div class="transformers-right">
+											+20 Menit
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Release:
+										</div>
+										<div class="transformers-right">
+											30 Sep 2019
+										</div>
+									</li>
+									<li>
+										<div class="transformers-left">
+											Bahasa:
+										</div>
+										<div class="transformers-right">
+											Indonesia
+										</div>
+									</li>
+
+									</li>
+									<li>
+										<div class="transformers-left">
+											Share:
+										</div>
+										<div class="transformers-right">
+											<a href="https://wa.me?text=Kimetsu%20No%20Yaiba%20Yuk%20Nonton%20Bareng%20https://nonkuyid.github.io/tampilan/A%20DAY%20BEFORE%20US.html%50By%20Nonkuy"><i class="icofont icofont-social-whatsapp"></i></a>
+											<br>
+											<label for="website">Link :</label>
+											<input type="text" id="website" readonly value="https://nonkuyid.github.io/tampilan/A%20DAY%20BEFORE%20US.html" />
+											<button data-copytarget="#website">copy</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a href="https://nonkuyid.github.io/tampilan/A%20DAY%20BEFORE%20US.html" class="theme-btn"><i class="fas fa-play"></i> VIEW</a>
+				</div>
+			</div>
+		</section><!-- transformers area end -->
+
+<br>
+		
+
+		<!-- details area start -->
+		<section class="details-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="details-content">
+							<div class="details-overview">
+								<h2>Berita</h2>
+								<h5>Demon Slayer</h5>
+								<p>Kimetsu no Yaiba (bahasa Jepang: 鬼滅の刃, terj. har. "Pedang Penghancur Iblis"[4]), yang diterbitkan di Indonesia dengan judul Demon Slayer: Kimetsu no Yaiba, adalah sebuah seri manga Jepang yang ditulis dan diilustrasikan oleh Koyoharu Gotōge. Ceritanya mengisahkan tentang Tanjiro Kamado, seorang anak laki-laki yang menjadi pembasmi iblis setelah keluarganya dibunuh dan adik perempuannya yang bernama Nezuko diubah menjadi iblis. Manga ini dimuat berseri dalam majalah Weekly Shōnen Jump terbitan Shueisha sejak bulan Februari 2016 hingga Mei 2020, dan telah dibundel menjadi dua puluh satu volume tankōbon hingga bulan Juli 2020. Manga ini diterbitkan dalam bahasa Inggris oleh Viz Media, sementara Shueisha merilisnya dalam bahasa Inggris dan Spanyol secara serentak dengan perilisannya di Jepang melalui platform Manga Plus milik mereka. </p>
+								<br>
+
+							</div>
+							
+							<div class="details-comment">
+								<a class="theme-btn theme-btn2" href="https://wa.me/62085748805799">Post Comment</a>
+								<p>You may use these HTML tags and attributes: You may use these HTML tags and attributes: You may use these HTML tags and attributes: </p>
+							</div>
+							<div class="details-thumb">
+								<div class="details-thumb-prev">
+									<div class="thumb-icon">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center text-lg-left">
+					    <div class="portfolio-sidebar">
+							<!--<img src="assets/img/sidebar/sidebar1.png" alt="sidebar" />-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- details area end -->
+		<!-- footer section start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+                    <div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<img src="https://i.ibb.co/JrZqBJN/LOGO-NO-LATAR.png" alt="about" />
+						</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Legal</h4>
+							<ul>
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Security</a></li>
+							</ul>
+						</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Account</h4>
+							<ul>
+								<li><a href="#">My Account</a></li>
+								<li><a href="#">Watchlist</a></li>
+								<li><a href="#">Collections</a></li>
+								<li><a href="#">User Guide</a></li>
+							</ul>
+						</div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Newsletter</h4>
+							<p>Subscribe to our newsletter system now to get latest news from us.</p>
+							<form action="https://wa.me/62085748805799text?%20Your%20Email">
+								<input type="text" placeholder="Enter your email.."/>
+								<button>SUBSCRIBE NOW</button>
+							</form>
+						</div>
+                    </div>
+				</div>
+				<hr />
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 text-center text-lg-left">
+							<div class="copyright-content">
+								<p><a target="_blank" href="#">NONKUY Official</a></p>
+							</div>
+						</div>
+						<div class="col-lg-6 text-center text-lg-right">
+							<div class="copyright-content">
+								<a href="#" class="scrollToTop">
+									Back to top<i class="icofont icofont-arrow-up"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!-- footer section end -->
+		<!-- jquery main JS -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- Slick nav JS -->
+		<script src="assets/js/jquery.slicknav.min.js"></script>
+		<!-- owl carousel JS -->
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<!-- Popup JS -->
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<!-- Isotope JS -->
+		<script src="assets/js/isotope.pkgd.min.js"></script>
+		<!-- main JS -->
+		<script src="assets/js/main.js"></script>
+	</body>
+
+</html>
+
+<script>
+	/*
+	Copy text from any appropriate field to the clipboard
+  By Craig Buckler, @craigbuckler
+  use it, abuse it, do whatever you like with it!
+*/
+(function() {
+
+	'use strict';
+  
+  // click events
+  document.body.addEventListener('click', copy, true);
+
+	// event handler
+	function copy(e) {
+
+    // find target element
+    var 
+      t = e.target,
+      c = t.dataset.copytarget,
+      inp = (c ? document.querySelector(c) : null);
+      
+    // is element selectable?
+    if (inp && inp.select) {
+      
+      // select text
+      inp.select();
+
+      try {
+        // copy text
+        document.execCommand('copy');
+        inp.blur();
+        
+        // copied animation
+        t.classList.add('copied');
+        setTimeout(function() { t.classList.remove('copied'); }, 1500);
+      }
+      catch (err) {
+        alert('please press Ctrl/Cmd+C to copy');
+      }
+      
+    }
+    
+	}
+
+})();
+</script>

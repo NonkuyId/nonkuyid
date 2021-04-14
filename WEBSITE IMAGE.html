@@ -1,0 +1,1216 @@
+<style >
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --pink: red;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--pink);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0; left: 0;
+    padding:1.2rem 2rem;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 3rem;
+    color:#fff;
+    margin-right: auto;
+}
+
+header .logo i{
+    padding:0 .5rem;
+    color:var(--pink);
+}
+
+header form{
+    display: none;
+    margin-right: auto;
+}
+
+header form #search{
+    height:4rem;
+    width:40rem;
+    padding:0 1rem;
+    font-size: 1.7rem;
+    color:#333;
+    border:none;
+}
+
+header form label{
+    height:4rem;
+    width:5rem;
+    line-height: 4rem !important;
+    text-align: center;
+    font-size: 1.7rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+}
+
+header form label:hover{
+    background:var(--pink);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin: 0 1rem;;
+}
+
+header .navbar ul li a{
+    color:#fff;
+    font-size: 2rem;
+}
+
+header .navbar ul li a:hover{
+    color:var(--pink);
+}
+
+header .upload{
+    margin-left: 2rem;
+    font-size: 2rem;
+    background:var(--pink);
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+header .upload:hover{
+    background:#fff;
+    color:#333;
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+
+header.header-active{
+    background:#111;
+}
+
+header.header-active form{
+    display: flex;
+}
+
+
+.home{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 2rem;
+}
+
+.home h1{
+    font-size: 6rem;
+    color:#fff;
+    text-align: center;
+    text-shadow: 0 .1rem .3rem #000;
+}
+
+.home form{
+    display: flex;
+    align-items: center;
+    height:5rem;
+    width:80rem;
+    border-radius: 5rem;
+    background:#fff;
+    margin:2rem 0;
+}
+
+.home form #home-search{
+    width:100%;
+    height:100%;
+    border:none;
+    background:none;
+    padding:0 2rem;
+    font-size: 2rem;
+    color:#333;
+}
+
+.home form label{
+    font-size: 2.5rem;
+    margin:0 2rem;
+    cursor: pointer;
+    color:#666;
+}
+
+.home form label:hover{
+    color:var(--pink);
+}
+
+.home .suggestion{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.home .suggestion li{
+    color:#eee;
+    margin:.2rem .5rem;
+    font-size: 2rem;
+}
+
+.home .suggestion li a{
+    color:#ccc;
+}
+
+.home .suggestion li a:hover{
+    color:var(--pink);
+}
+
+.gallery{
+    column-count: 3;
+    padding: 4rem 10%;
+}
+
+.gallery .box{
+    padding:1rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery .box img{
+    width:100%;
+    object-fit: cover;
+}
+
+.gallery .box .info{
+    position: absolute;
+    bottom:-100%; left:0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.gallery .box:hover .info{
+    bottom:0;
+}
+
+.gallery .box .info .fa-download{
+    margin:2rem;
+    padding:1rem 2rem;
+    font-size: 2rem;
+    color:#333;
+    background:#fff;
+    box-shadow: 0 .1rem .2rem rgba(0,0,0,.3);
+}
+
+.gallery .box .info .fa-download:hover{
+    background:var(--pink);
+    color:#fff;
+}
+
+.gallery .box .info .links{
+    padding-right: 1rem;
+}
+
+.gallery .box .info .links a{
+    font-size: 2rem;
+    text-shadow: 0 .1rem .1rem #000;
+    margin:3rem 1rem;
+    color:#fff;
+}
+
+.gallery .box .info .links a:hover{
+    color:var(--pink);
+}
+
+.more{
+    font-size: 2rem;
+    display: block;
+    margin:0 auto;
+    margin-bottom: 3rem;
+    height:4rem;
+    width:20rem;
+    border-radius: 5rem;
+    background:var(--pink);
+    color:#fff;
+    cursor: pointer;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.more:hover{
+    background:#333;
+    letter-spacing: .1rem;
+}
+
+.footer{
+    background:#eee;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    margin:2rem;
+    flex:1 1 30rem;
+}
+
+.footer .box-container .box h3{
+    color:var(--pink);
+    font-size: 2.5rem;
+}
+
+.footer .box-container .box p{
+    color:#333;
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.8rem;
+    padding:.5rem 0;
+    color:#333;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box form{
+    display: flex;
+    width: 100%;
+}
+
+.footer .box-container .box form input{
+    height:4rem;
+    width: 100%;
+    padding:0 1rem;
+    font-size: 1.7rem;
+    color:#333;
+    border:none;
+}
+
+.footer .box-container .box form button{
+    height:4rem;
+    width:6rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:#fff;
+    border:none;
+    background:var(--pink);
+    cursor: pointer;
+}
+
+.footer .box-container .box form button:hover{
+    background:#333;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:2rem 1rem;
+    background:#ccc;
+    color:#333;
+    font-size: 2rem;
+}
+
+.footer .credit a{
+    color:var(--pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header form #search{
+        width: 100%;
+    }
+
+    .gallery{
+        column-count: 2;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 52%;
+    }
+
+    header #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:6rem; right:-120%;
+        height:100vh;
+        background:#fff;
+        width:35rem;
+    }
+
+    header .navbar ul{
+        padding-top: 4rem;
+        flex-flow: column;
+    }
+
+    header .navbar ul li{
+        width:100%;
+        text-align: center;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .nav-toggle{
+        right:0%;
+    }
+
+    .home form{
+        width: 100%;
+    }
+
+    .gallery{
+        column-count: 1;
+    }
+
+}
+
+@media (max-width:500px){
+
+    header form{
+        display: none !important;
+    }
+
+    header #menu{
+        order:1;
+    }
+
+    header .navbar{
+        width:100vw;
+    }
+
+    header .upload{
+        margin-right: 2rem;
+    }
+
+    .home h1{
+        font-size: 4rem;
+    }
+
+    .gallery{
+        padding:2rem 1rem;
+    }
+
+}
+/* Optional - (you can remove it) */
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Optional - (you can remove it) */
+
+
+
+/* Load Settings */
+.no-scroll-y {
+    overflow-y: hidden;
+}
+
+#preloader-section{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+
+/* Preloader */
+.ctn-preloader {
+    -webkit-box-align: center;
+            align-items: center;
+  
+  /* Show or Hide cursor when hover of Preloader*/
+  cursor: none;
+    display: -webkit-box;
+    display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+          justify-content: center;
+    position: fixed;
+    left: 0;
+  top: 0;
+    width: 100%;
+  z-index: 9999;
+}
+
+.ctn-preloader .animation-preloader {
+    position: absolute;
+  z-index: 100;
+}
+
+/* Spinner loading */
+.ctn-preloader .animation-preloader .spinner {
+  -webkit-animation: spinner 1s infinite linear;
+          animation: spinner 1s infinite linear;
+    border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #124618; /* It is not identified in alphabetical order so that it does not overwrite it */
+  height: 9em;
+  margin: 0 auto 3.5em auto;
+  width: 9em;
+}
+
+/* Text Loading */
+.ctn-preloader .animation-preloader .txt-loading {
+  font: bold 5em 'Montserrat', sans-serif;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
+  -webkit-animation: letters-loading 4s infinite;
+          animation: letters-loading 4s infinite;
+  color: #124618;
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading {
+    color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Letters Animation */
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(11):before {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(12):before {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(13):before {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(14):before {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(15):before {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(16):before {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+/* Loader section Settings */
+.ctn-preloader .loader-section {
+  background-color: #ffffff;
+  height: 100%;
+    position: fixed;
+  top: 0;
+  width: calc(50% + 1px);
+}
+
+.ctn-preloader .loader-section.section-left {
+  left: 0;
+}
+
+.ctn-preloader .loader-section.section-right {
+  right: 0;
+}
+
+/* Fade effect in loading animation */
+.loaded .animation-preloader {
+  opacity: 0;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+/* Curtain effect */
+.loaded .loader-section.section-left {
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+  -webkit-transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
+  transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
+}
+
+.loaded .loader-section.section-right {
+  -webkit-transform: translateX(101%);
+          transform: translateX(101%);
+  -webkit-transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
+  transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
+}
+
+/* Preloader Animation */
+@-webkit-keyframes spinner {
+    to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+    }
+}
+@keyframes spinner {
+    to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+    }
+}
+
+/* Animation of the letters loading from the preloader */
+@-webkit-keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+  }
+
+  25%,
+  50% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+  }
+
+  25%,
+  50% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+/* Backward laptop size (laptop, tablet, cell phone) */
+@media screen and (max-width: 767px) {
+    /* Preloader */
+    /* Spinner Loading */   
+    .ctn-preloader .animation-preloader .spinner {
+        height: 8em;
+        width: 8em;
+    }
+
+    /* Text Loading */
+    .ctn-preloader .animation-preloader .txt-loading {
+      font: bold 3.5em 'Montserrat', sans-serif;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Prelaoder */
+    /* Spinner Loading */
+    .ctn-preloader .animation-preloader .spinner {
+        height: 7em;
+        width: 7em;
+    }
+
+    /* Text Loading */
+    .ctn-preloader .animation-preloader .txt-loading {
+      font: bold 2em 'Montserrat', sans-serif;
+    }
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NONKUY IMAGE</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="tampilan.css">
+
+</head>
+<body>
+    
+
+<!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
+<body id="page-top">
+
+    <!-- Prevent Scroll -->
+    <div id="preloader-body" class="no-scroll-y">
+      
+        <!-- Start: Preloader -->
+        <section id="preloader-section">
+            <div id="preloader">
+                <div id="ctn-preloader" class="ctn-preloader">
+                    <div class="animation-preloader">
+                        
+                        <!-- Spinner -->
+                        <div class="spiner"></div>
+                        <img src="https://i.ibb.co/Gk6kR2r/images-35.jpg">
+                        
+                        <!-- Start: Text Loading -->
+                        <div class="txt-loading">
+                            <span data-text-preloader="N" class="letters-loading">N</span>
+                            <span data-text-preloader="O" class="letters-loading">O</span>
+                            <span data-text-preloader="N" class="letters-loading">N</span>
+                            <span data-text-preloader="K" class="letters-loading">K</span>
+                            <span data-text-preloader="U" class="letters-loading">U</span>
+                            <span data-text-preloader="Y" class="letters-loading">Y</span>
+                           <!--  <span data-text-preloader="I" class="letters-loading">I</span>
+                            <span data-text-preloader="V" class="letters-loading">V</span>
+                            <span data-text-preloader="E" class="letters-loading">E</span> -->
+                        </div>
+                        <!-- End: Text Loading -->
+
+                    </div>
+
+                    <!-- Start: Preloader sides - Model 1 -->
+                    <div class="loader-section section-left"></div>
+                    <div class="loader-section section-right"></div>
+                    <!-- End: Preloader sides - Model 1 -->
+                </div>
+            </div>
+        </section>
+
+<!-- header section starts  -->
+
+<header>
+
+<a href="#" class="logo"><i class="fas fa-images"></i>NONKUY</a>
+
+
+
+<div id="menu" class="fas fa-bars"></div>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#Home">HOME</a></li>
+        <li><a href="#Anime">ANIME</a></li>
+        <li><a href="#Drama">DRAMA</a></li>
+        <li><a href="#Kartun">KARTUN</a></li>
+    </ul>
+</nav>
+
+<a href="#" class="upload">AKUN</a>
+
+</header>
+
+<!-- header section ends  -->
+
+
+<!-- home section starts  -->
+<section id="Home">
+<section class="home">
+
+<h1>Selamat Datang Di Nonkuy Galerry</h1>
+
+
+
+<ul class="suggestion">
+    <li>Genre : </li>
+    <li><a href="#Anime">Anime ,</a></li>
+    <li><a href="#Drama"> Drama ,</a></li>
+    <li><a href="#Kartun"> Kartun</a></li>
+</ul>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- gallery section start  -->
+<section id="Anime">
+<section class="gallery">
+ <section id="Logo">
+    <div class="box">
+        <img src="https://i.ibb.co/X7D1cdH/demon-slayer-logo.png" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1mm99bAKZd0GNeIABP54l0HJ7YSJbioKK/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1mm99bAKZd0GNeIABP54l0HJ7YSJbioKK/view?usp=sharing" class="fas fa-share" style="color: black"></a>
+                <a href="#" class="fas fa-shar"></a>
+            </div>
+        </div>
+    </div>
+ <section id="Dora">
+    <div class="box">
+        <img src="https://i.ibb.co/p2SGZVS/Logo-attack-on-titan.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1Rjz5Owj-0Thmn_rcAeeorTMFN3E3Ovqv/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1Rjz5Owj-0Thmn_rcAeeorTMFN3E3Ovqv/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="fas fa-shar"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/GRmWHDm/logo-one-pice.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1sz3UF0D2H_VEOQemZVFOyjd0_ahXSaL9/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1sz3UF0D2H_VEOQemZVFOyjd0_ahXSaL9/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/HVHFqdj/demon-slayer.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1eCtTA3Ln7xSCnxC0wZ9XmNhKuIbSADMB/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1eCtTA3Ln7xSCnxC0wZ9XmNhKuIbSADMB/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/YdGt0gM/demon-slayer-wallpaper-1.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1EmIVj_gCRopjBbOoKGg1QfAUEJ22XfNl/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1EmIVj_gCRopjBbOoKGg1QfAUEJ22XfNl/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/M8jzyZp/nezuko.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/12i9YkoOp_D6BLC4car6JI3GPaj6VICZt/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/12i9YkoOp_D6BLC4car6JI3GPaj6VICZt/view?usp=sharing" class="fas fa-share" style="color: black"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/K0zrg2T/high-school-wallpaper-1.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1g69aPqVXigS_oEize_JbOBE7nV9voaI6/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1g69aPqVXigS_oEize_JbOBE7nV9voaI6/view?usp=sharing" class="fas fa-share" ></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/VvX2m53/high-school-wallpaper-2.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1RtT3wKcOpxkGRX8yR3mooQUxK7Rom_3D/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1RtT3wKcOpxkGRX8yR3mooQUxK7Rom_3D/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/fvsBkbh/high-school-3.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/17yVkHDzJ1pkR3xh8QuhatoqhjuTcy8tV/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/17yVkHDzJ1pkR3xh8QuhatoqhjuTcy8tV/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/YN5BR83/boruto-1.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1jTmVLQpK6Y0ySHabqc6XCpMHpaC1zqFp/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1jTmVLQpK6Y0ySHabqc6XCpMHpaC1zqFp/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/y8DD5tq/boruto-2.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1aE0QMJ35IHy04C38kXHm76ksSnomgqqZ/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1aE0QMJ35IHy04C38kXHm76ksSnomgqqZ/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/2YMt4RZ/logo-boruto.png" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1ujmvl9T3DJhZg-O7qTtVTlpZvCvMb9wf/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1ujmvl9T3DJhZg-O7qTtVTlpZvCvMb9wf/view?usp=sharing" class="fas fa-share" style="color: black"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/Tb36vYM/boruto-3.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1R_3elWjjBnTCIZ0HuQWp6tQNb449azij/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1R_3elWjjBnTCIZ0HuQWp6tQNb449azij/view?usp=sharing" class="fas fa-share" ></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/QFXSb9H/naruto-2.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1uL2GSL-7-MkH41selyAcdGLuxm39kZmk/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1uL2GSL-7-MkH41selyAcdGLuxm39kZmk/view?usp=sharing" class="fas fa-share"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="box">
+        <img src="https://i.ibb.co/vkwLRdM/logo-naruto.png" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1DO0ngzlKZfA82OlFMNNkELtYJkpZUr6f/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1DO0ngzlKZfA82OlFMNNkELtYJkpZUr6f/view?usp=sharing" class="fas fa-share" style="color: red"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/bHSmn7Q/a-i-co-incarnation.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1-zB7YYMaZv6zQivpt9ytkP81o0yZl_Lw/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1-zB7YYMaZv6zQivpt9ytkP81o0yZl_Lw/view?usp=sharing" class="fas fa-share" style="color: white"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/P5g606b/aico-wallpaper-pc.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/14DZcGclbEwCoYh09D0CB1qPVicwMqfDK/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/14DZcGclbEwCoYh09D0CB1qPVicwMqfDK/view?usp=sharing" class="fas fa-share" style="color: white"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://i.ibb.co/9tBbcjh/attack-on-titan.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/14DZcGclbEwCoYh09D0CB1qPVicwMqfDK/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/14DZcGclbEwCoYh09D0CB1qPVicwMqfDK/view?usp=sharing" class="fas fa-share" style="color: white"></a>
+                <a href="#" class="far fa-thumbs-u"></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="Drama">
+
+<br><br>
+
+<hr><hr><!-- Drakor Gallery -->
+
+<br><br><br>
+
+<center>
+    <h3>Drama</h3>
+</center>
+
+<section id="Drama">
+        <div class="box">
+        <img src="https://i.ibb.co/Qnjmf4r/drama-1.jpg" alt="">
+        <div class="info">
+            <a href="https://drive.google.com/file/d/1ixU7yDKifOHnTuo6DPFrbquowgTQ9j59/view?usp=sharing" class="fas fa-download"></a>
+            <div class="links">
+                <a href="#" class="far fa-hear"></a>
+                <a href="https://wa.me?text=Download%20Image%20https://drive.google.com/file/d/1ixU7yDKifOHnTuo6DPFrbquowgTQ9j59/view?usp=sharing" class="fas fa-share" style="color: black"></a>
+                <a href="#" class="far fa-cloc"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+<div class="box-container">
+
+    <div class="box">
+        <h3>Apa Itu Nonkuy Galerry?</h3>
+        <p>Website Yang Menyediakan Foto-Foto Anime, Drama, Kartun Dan Lain Nya. Kalian Juga Bisa Download Dan Mengshare Image Yang Kami Sediakan. </p>
+    </div>
+
+    <div class="box">
+        <h3>SOSIAL MEDIA</h3>
+        <a href="#">INSTAGRAM</a>
+        <a href="#">TIKTOK</a>
+        <a href="#">YOUTUBE</a>
+    </div>
+
+
+
+</div>
+
+
+<h1 class="credit">created by <a href="#">NONKUY</a> | all rights reserved.</h1>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="tampilan.js"></script>
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+    $('#menu').click(function(){
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('nav-toggle');
+    });
+
+    $(window).on('scroll load',function(){
+
+        $('#menu').removeClass('fa-times');
+        $('.navbar').removeClass('nav-toggle');
+
+        if($(window).scrollTop() > 60){
+            $('header').addClass('header-active');
+        }else{
+            $('header').removeClass('header-active');
+        }
+        
+    });
+
+});
+    
+    
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+  setTimeout(function () {
+    $("#ctn-preloader").addClass("loaded");
+    // Once the preloader has finished, the scroll appears
+    $("#preloader-body").removeClass("no-scroll-y");
+
+    if ($("#ctn-preloader").hasClass("loaded")) {
+      // It is so that once the preloader is gone, the entire preloader section will removed
+      $("#preloader")
+        .delay(1000)
+        .queue(function () {
+          $(this).remove();
+
+          // Force Main page to show from the Start(Top) even if user scroll down on preloader
+
+          // Model 1 - Smooth
+          document
+            .getElementById("page-top")
+            .scrollIntoView({ behavior: "smooth" });
+          // Model 2 - Fast
+          // document.getElementById("page-top").scrollIntoView();
+        });
+    }
+  }, 6000);
+});
+
+
+
+</script>
+</script>
