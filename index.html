@@ -121,53 +121,47 @@
                 <em>Coming Soon On NONKUY</em>
             </h3>
 
-            <style>
-p {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 0px;
-  margin: -28px 47px;
-  position: absolute;
-  background-color: white;
-  width: 200px;
-  height: auto;
-}
-</style>
-</head>
-<body>
-
-<p id="demo"></p>
+           <link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">
+<!-- Display the countdown timer in an element -->
+<p id="demo" style="background-image: -moz-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: -webkit-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: -o-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: -ms-linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+background-image: linear-gradient(top,#b8b0af 0%,#f2ecea 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position:relative;font-size:1.6em;font-family: 'Yantramanav', sans-serif;font-weight:900;text-align: center;"></p>
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jul 13, 2021 12:00:00").getTime();
+  // Set the date we're counting down to
+var countDownDate = new Date("July 13, 2021 12:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
 
-  // Get today's date and time
+  // Get todays date and time
   var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
+
+  // Find the distance between now an the count down date
   var distance = countDownDate - now;
-    
+
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML =days + "D " + hours + "H "
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
   + minutes + "M " + seconds + "S ";
-    
-  // If the count down is over, write some text 
+
+  // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "LAUNCHING";
   }
 }, 1000);
 </script>
-<br>
+
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="FOLDER/demon.html">Watch Trailer
                 Now</a>
         </div>
@@ -177,7 +171,7 @@ var x = setInterval(function() {
 
 <marquee>Hai Selamat Datang Di NONKUY Tempat Menonton, Di Sarankan Saat Menonton Membuka Melalui Google Agar Saat Menonton Dapat Posisi Tidur / Horizontal</marquee>
 
-<!-- hindi movies section start -->
+<!-- Anime Lovers -->
     <section id="Anime">
         <div class="Container">
             <h2>Anime Lovers</h2>
@@ -200,22 +194,8 @@ var x = setInterval(function() {
                                     src="https://i.ibb.co/bHSmn7Q/a-i-co-incarnation.jpg">A.I.C.O.: Incarnation</a></div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="col-6"><a href="Movies/BhootPartOne/BhootPartOne.html" style="text-decoration: none;"><img
-                                    src="https://i.ibb.co/XjKp9DT/high-school-dxd.jpg">High School Dxd</a></div>
-                        <div class="col-6"><a href="tampilan/boruto.html" style="text-decoration: none;"><img
-                                    src="IMAGE/boruto.jpg">Boruto</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="col-6"><a href="Movies/Drive/Drive.html" style="text-decoration: none;"><img
-                                    src="https://i.ibb.co/YhJJF1m/one-piece.jpg">One Piece</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+                </section>
 
 <!--KARTUN-->
 
